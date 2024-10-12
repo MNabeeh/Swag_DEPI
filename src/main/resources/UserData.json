@@ -1,0 +1,23 @@
+[
+  {
+    "username": "standard_user",
+    "passwrod": "secret_sauce"
+
+  },
+  {
+    "username": "standard_user_no",
+    "passwrod": "secret_sauce"
+  },
+
+  {
+    "firstname": "Maha",
+    "lastname" : "Ali",
+    "PostalCode" : "1234"
+  }
+
+
+
+
+
+
+]
