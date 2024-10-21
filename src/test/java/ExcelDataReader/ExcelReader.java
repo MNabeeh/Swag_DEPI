@@ -32,7 +32,8 @@ public class ExcelReader {
     // this method to get all the data in the sheet.
 
     public Object[][] getExcelData(int sheetNumber) throws IOException {
-        try { FileInputStream fis = getFileInputStream(filePath);
+        try {
+            FileInputStream fis = getFileInputStream(filePath);
             XSSFWorkbook workbook = new XSSFWorkbook(fis);
             XSSFSheet sheet = workbook.getSheetAt(sheetNumber);
             int totalNumberOfRows = (sheet.getLastRowNum() + 1);
@@ -51,9 +52,11 @@ public class ExcelReader {
                 }
             }
             return arrayExcelData;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
-
+    }
 
 
 //        try  FileInputStream fis = getFileInputStream(filePath)

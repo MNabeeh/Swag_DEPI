@@ -45,8 +45,8 @@ public class T2_1_HomeTest extends BaseTest {
         ProductPage productPage = new ProductPage(driver);
         loginPage.loginToTheSite(userName, password);
         homePage.choseYourFirstProduct();
-        boolean isThePriceIsVisbleInTheProductPage = driver.findElement(productPage.getAssertPrice()).isDisplayed();
-        if (isThePriceIsVisbleInTheProductPage){
+        boolean isThePriceIsVisbileInTheProductPage = driver.findElement(productPage.getAssertPrice()).isDisplayed();
+        if (isThePriceIsVisbileInTheProductPage){
             System.out.println("The price is visible and now you are in the product Page");
         }
         else System.out.println("revise your code ");
