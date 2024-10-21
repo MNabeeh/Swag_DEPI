@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test thread-count="6" name="Test">
+        <classes>
+            <class name="Features_Test.T1_LoginTest.T1_1_LoginTest"/>
+            <class name="Features_Test.T2_ProductsTest.T2_1_HomeTest"/>
+            <class name="Features_Test.T2_ProductsTest.T2_2_ProductTest"/>
+            <class name="Features_Test.T3_CartTest.T3_1_CartTest"/>
+            <class name="Features_Test.T3_CartTest.T3_2_CheckOutTest"/>
+            <class name="Features_Test.T3_CartTest.T3_3_OverViewTest"/>
+
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
