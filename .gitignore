@@ -14,6 +14,7 @@ target/
 
 /data1/
 /allure-results/
+
 .ExcelDataReader/excel_new.java
 .ExcelDataReader/excelWork.java
 .ExcelDataReader/Helper.java
