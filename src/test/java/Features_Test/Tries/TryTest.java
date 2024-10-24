@@ -1,16 +1,16 @@
 package Features_Test.Tries;
 
 
-import Features_Pages.f2_Products.HomePage;
-import Features_Pages.f1_Auth.LoginPage;
+import Features_Pages.f2_Products.P2_1_HomePage;
+import Features_Pages.f1_Auth.P1_1_LoginPage;
 import Features_Test.BaseTest;
 import org.testng.annotations.Test;
 
 public class TryTest extends BaseTest {
     @Test
     public void login() {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
 
         loginPage.loginToTheSite("locked_out_user", "secret_sauce");
         try {
@@ -36,8 +36,8 @@ public class TryTest extends BaseTest {
 
     @Test
     public void problem_user_Login() {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
         loginPage.loginToTheSite("problem_user", "secret_sauce");
         boolean isTheWrongPhotoDisplayed = driver.findElement(homePage.getAssertThePhotoOfThePage()).isDisplayed();
         if (isTheWrongPhotoDisplayed) {
@@ -48,8 +48,8 @@ public class TryTest extends BaseTest {
 
     @Test
     public void prueba() {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
         loginPage.loginToTheSite("standard_user", "secrets_sauce");
         try {
             boolean isTheCorrectPhotoDisplayed = driver.findElement(homePage.getAssertThePhotoOfThePage()).isDisplayed();

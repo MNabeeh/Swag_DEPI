@@ -1,12 +1,12 @@
 package Features_Pages.f1_Auth;
 
-import Features_Pages.f2_Products.HomePage;
+import Features_Pages.f2_Products.P2_1_HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage   {
+public class P1_1_LoginPage {
     private WebDriver driver;
-    public LoginPage(WebDriver driver) {
+    public P1_1_LoginPage(WebDriver driver) {
         this.driver = driver;
     }
         protected final By userName = By.id("user-name");
@@ -20,17 +20,16 @@ public class LoginPage   {
             return assertErrorSMS;
         }
     public By getAssertThatTheUserInLoginPage(){
-        return assertThatTheUserInLoginPage;
+      return assertThatTheUserInLoginPage;
     }
 
 
-
-    public HomePage loginToTheSite (String username, String password)
+    public P2_1_HomePage loginToTheSite (String username, String password)
     {
         driver.findElement(userName).sendKeys(username);
         driver.findElement(passWord).sendKeys (password);
         driver.findElement(loginBtn).click();
-        return new HomePage(driver);
+        return new P2_1_HomePage(driver);
     }
 
     }

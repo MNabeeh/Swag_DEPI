@@ -1,10 +1,10 @@
 package Features_Test.T3_CartTest;
 
-import Features_Pages.f2_Products.HomePage;
-import Features_Pages.f2_Products.ProductPage;
-import Features_Pages.f3_Cart.CartPage;
-import Features_Pages.f4_CheckOut.CheckOutPage;
-import Features_Pages.f1_Auth.LoginPage;
+import Features_Pages.f2_Products.P2_1_HomePage;
+import Features_Pages.f2_Products.P2_2_ProductPage;
+import Features_Pages.f3_Cart.P3_CartPage;
+import Features_Pages.f4_CheckOut.P4_1_CheckOutPage;
+import Features_Pages.f1_Auth.P1_1_LoginPage;
 import Features_Test.BaseTest;
 import ExcelDataReader.ExcelReader;
 import org.testng.annotations.DataProvider;
@@ -24,10 +24,10 @@ public class T3_1_CartTest extends BaseTest {
 
     @Test(dataProvider = "ExcelData")
     public void testOneITemAddToTheCart( String user,String password) {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        ProductPage productPage = new ProductPage(driver);
-        CartPage cartPage = new CartPage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
+        P2_2_ProductPage productPage = new P2_2_ProductPage(driver);
+        P3_CartPage cartPage = new P3_CartPage(driver);
 
         loginPage.loginToTheSite(user, password);
         homePage.choseYourFirstProduct();
@@ -53,11 +53,11 @@ public class T3_1_CartTest extends BaseTest {
     @Test (dataProvider = "ExcelData")
 
     public void addTwoIemInTheCart_and_testIT(String userName, String password) {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        ProductPage productPage = new ProductPage(driver);
-        CartPage cartPage = new CartPage(driver);
-        CheckOutPage checkOutPage = new CheckOutPage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
+        P2_2_ProductPage productPage = new P2_2_ProductPage(driver);
+        P3_CartPage cartPage = new P3_CartPage(driver);
+        P4_1_CheckOutPage checkOutPage = new P4_1_CheckOutPage(driver);
 
         loginPage.loginToTheSite(userName, password);
         homePage.choseYourFirstProduct();
@@ -86,10 +86,10 @@ public class T3_1_CartTest extends BaseTest {
     @Test (dataProvider = "ExcelData")
 
     public void deleteOneItemFormTheCart(String userName, String password) {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        ProductPage productPage = new ProductPage(driver);
-        CartPage cartPage = new CartPage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
+        P2_2_ProductPage productPage = new P2_2_ProductPage(driver);
+        P3_CartPage cartPage = new P3_CartPage(driver);
 
         loginPage.loginToTheSite(userName, password);
         homePage.choseYourFirstProduct();

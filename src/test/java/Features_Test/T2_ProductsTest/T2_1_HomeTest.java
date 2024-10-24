@@ -1,9 +1,9 @@
 package Features_Test.T2_ProductsTest;
 
-import Features_Pages.f3_Cart.CartPage;
-import Features_Pages.f2_Products.HomePage;
-import Features_Pages.f1_Auth.LoginPage;
-import Features_Pages.f2_Products.ProductPage;
+import Features_Pages.f3_Cart.P3_CartPage;
+import Features_Pages.f2_Products.P2_1_HomePage;
+import Features_Pages.f1_Auth.P1_1_LoginPage;
+import Features_Pages.f2_Products.P2_2_ProductPage;
 import Features_Test.BaseTest;
 import ExcelDataReader.ExcelReader;
 import org.testng.annotations.DataProvider;
@@ -23,9 +23,9 @@ public class T2_1_HomeTest extends BaseTest {
     @Test (dataProvider = "ExcelData")
 
     public void sortTheProducts (String userName, String password) {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        ProductPage productPage = new ProductPage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
+        P2_2_ProductPage productPage = new P2_2_ProductPage(driver);
 
         loginPage.loginToTheSite(userName, password);
         homePage.sortTheProducts("Price (low to high)");
@@ -40,9 +40,9 @@ public class T2_1_HomeTest extends BaseTest {
     @Test (dataProvider = "ExcelData")
     public void choseOneProduct_ByHyperlink(String userName, String password) {
 
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        ProductPage productPage = new ProductPage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
+        P2_2_ProductPage productPage = new P2_2_ProductPage(driver);
         loginPage.loginToTheSite(userName, password);
         homePage.choseYourFirstProduct();
         boolean isThePriceIsVisbileInTheProductPage = driver.findElement(productPage.getAssertPrice()).isDisplayed();
@@ -56,9 +56,9 @@ public class T2_1_HomeTest extends BaseTest {
     @Test (dataProvider = "ExcelData")
     public void choseTwoProductFrom_HomePage(String userName, String password) {
 
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        CartPage cartPage = new CartPage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage = new P2_1_HomePage(driver);
+        P3_CartPage cartPage = new P3_CartPage(driver);
 
         loginPage.loginToTheSite(userName, password);
         homePage.clickOneTowProdctsFormTheHomePage();

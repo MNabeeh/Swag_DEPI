@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class HomePage {
+public class P2_1_HomePage {
     private WebDriver driver;
 
-    public HomePage(WebDriver driver) {
+    public P2_1_HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -46,14 +46,14 @@ public class HomePage {
     public By getRemoveBtn(){
         return removeBtn;
     }
-        public ProductPage choseYourFirstProduct() {
+        public P2_2_ProductPage choseYourFirstProduct() {
             driver.findElement(clickOnProduct1).click();
-            return new ProductPage(driver);
+            return new P2_2_ProductPage(driver);
         }
 
-    public ProductPage choseYourSecondProduct () {
+    public P2_2_ProductPage choseYourSecondProduct () {
         driver.findElement(clickOnProduct2).click();
-        return new ProductPage(driver);
+        return new P2_2_ProductPage(driver);
     }
 
 

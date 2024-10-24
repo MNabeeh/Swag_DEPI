@@ -1,14 +1,14 @@
 package Features_Test.Tries;
 
 import Features_Test.BaseTest;
-import Features_Pages.f1_Auth.LoginPage;
+import Features_Pages.f1_Auth.P1_1_LoginPage;
 import org.testng.annotations.Test;
 
 public class E2E extends BaseTest {
     @Test
 
     public void fromLoginToLastStep_OneProduct() {
-        new LoginPage(driver)
+        new P1_1_LoginPage(driver)
                 .loginToTheSite("standard_user", "secret_sauce")
                 .choseYourFirstProduct()
                 .clickOnAddToCartBtn()
@@ -33,7 +33,7 @@ public class E2E extends BaseTest {
 
     @Test
     public void fromLoginToLastStep_TwoProducts() {
-        new LoginPage(driver)
+        new P1_1_LoginPage(driver)
                 .loginToTheSite("standard_user", "secret_sauce")
                 .choseYourFirstProduct()
                 .clickOnAddToCartBtn()

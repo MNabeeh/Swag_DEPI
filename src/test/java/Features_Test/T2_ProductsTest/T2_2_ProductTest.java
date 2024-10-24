@@ -1,8 +1,8 @@
 package Features_Test.T2_ProductsTest;
 
-import Features_Pages.f2_Products.HomePage;
-import Features_Pages.f1_Auth.LoginPage;
-import Features_Pages.f2_Products.ProductPage;
+import Features_Pages.f2_Products.P2_1_HomePage;
+import Features_Pages.f1_Auth.P1_1_LoginPage;
+import Features_Pages.f2_Products.P2_2_ProductPage;
 import Features_Test.BaseTest;
 import ExcelDataReader.ExcelReader;
 import org.testng.annotations.DataProvider;
@@ -22,9 +22,9 @@ public class T2_2_ProductTest extends BaseTest {
 
     @Test (dataProvider="ExcelData")
     public void addProductToTheCart (String userName, String password) {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage= new HomePage(driver);
-        ProductPage productPage = new ProductPage(driver);
+        P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+        P2_1_HomePage homePage= new P2_1_HomePage(driver);
+        P2_2_ProductPage productPage = new P2_2_ProductPage(driver);
 
         loginPage.loginToTheSite(userName,password);
         homePage.choseYourFirstProduct();

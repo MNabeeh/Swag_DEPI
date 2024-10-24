@@ -1,14 +1,14 @@
 package Features_Pages.f4_CheckOut;
 
-import Features_Pages.f2_Products.HomePage;
+import Features_Pages.f2_Products.P2_1_HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class OverviewPage {
+public class P4_2_OverviewPage {
 
     private WebDriver driver;
 
-     public  OverviewPage (WebDriver driver){
+     public P4_2_OverviewPage(WebDriver driver){
           this.driver= driver;
      }
 
@@ -28,14 +28,14 @@ public class OverviewPage {
     }
 
 
-    public CompleteCheckOutPage clickOnFinishBtn(){
+    public P4_3_CompleteCheckOutPage clickOnFinishBtn(){
         driver.findElement(finishBtn).click();
-        return new CompleteCheckOutPage(driver);
+        return new P4_3_CompleteCheckOutPage(driver);
     }
 
 
-    public HomePage clickOnCancelBtn(){
+    public P2_1_HomePage clickOnCancelBtn(){
         driver.findElement(cancelBtn).click();
-        return new HomePage(driver);
+        return new P2_1_HomePage(driver);
     }
 }

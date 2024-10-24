@@ -1,14 +1,14 @@
 package Features_Pages.f3_Cart;
 
-import Features_Pages.f4_CheckOut.CheckOutPage;
-import Features_Pages.f2_Products.HomePage;
+import Features_Pages.f4_CheckOut.P4_1_CheckOutPage;
+import Features_Pages.f2_Products.P2_1_HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CartPage {
+public class P3_CartPage {
 
     private WebDriver driver;
-    public CartPage (WebDriver driver){
+    public P3_CartPage(WebDriver driver){
         this .driver= driver;
     }
 
@@ -37,13 +37,13 @@ public class CartPage {
         return assertThatTwoItemInTheCart;
     }
 
-    public HomePage clickOnContinueShoopingBtn(){
+    public P2_1_HomePage clickOnContinueShoopingBtn(){
        driver.findElement(continueShoppingBtn).click();
-       return new HomePage(driver);
+       return new P2_1_HomePage(driver);
     }
-    public CheckOutPage clickOnCheckoutBtn(){
+    public P4_1_CheckOutPage clickOnCheckoutBtn(){
         driver.findElement(checkoutBtn).click();
-        return new CheckOutPage(driver);
+        return new P4_1_CheckOutPage(driver);
     }
 
     public void clickOnRemoveBtn(){

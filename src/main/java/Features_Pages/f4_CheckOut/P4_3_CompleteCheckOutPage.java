@@ -3,11 +3,11 @@ package Features_Pages.f4_CheckOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CompleteCheckOutPage {
+public class P4_3_CompleteCheckOutPage {
 
     private WebDriver driver;
 
-    public  CompleteCheckOutPage(WebDriver driver){
+    public P4_3_CompleteCheckOutPage(WebDriver driver){
          this.driver=driver;
     }
     private String OpenMenu= "Logout";

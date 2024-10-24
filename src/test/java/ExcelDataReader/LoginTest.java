@@ -1,8 +1,8 @@
 package ExcelDataReader;
 
-import Features_Pages.f1_Auth.LoginPage;
-import Features_Pages.f2_Products.HomePage;
-import Features_Pages.f3_Cart.CartPage;
+import Features_Pages.f1_Auth.P1_1_LoginPage;
+import Features_Pages.f2_Products.P2_1_HomePage;
+import Features_Pages.f3_Cart.P3_CartPage;
 import Features_Test.BaseTest;
 import org.testng.annotations.Test;
 
@@ -13,8 +13,8 @@ public class LoginTest extends BaseTest {
      //check Valid user , Invalid user and locked_out_user secenarios
 
  public void loginTest () {
-     LoginPage loginPage = new LoginPage(driver);
-     HomePage homePage = new HomePage(driver);
+     P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+     P2_1_HomePage homePage = new P2_1_HomePage(driver);
 
      loginPage.loginToTheSite("", "");
      try {
@@ -31,8 +31,8 @@ public class LoginTest extends BaseTest {
      // Test "login with the Problem User "
     // Test_ProblemUser_And_visualUser
      public void Test_ProblemUser_And_visualUser  () {
-         LoginPage loginPage = new LoginPage(driver);
-         HomePage homePage = new HomePage(driver);
+         P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+         P2_1_HomePage homePage = new P2_1_HomePage(driver);
 
          loginPage.loginToTheSite("problem_user", "secret_sauce");
          boolean isTheInCorrectImageVisibe = driver.findElement(homePage.getAssertThePhotoOfThePage()).isDisplayed();
@@ -44,8 +44,8 @@ public class LoginTest extends BaseTest {
      @Test
      //Test the time with performance_glitch_user
      public void test_Performance_glitch () {
-         LoginPage loginPage = new LoginPage(driver);
-         HomePage homePage = new HomePage(driver);
+         P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+         P2_1_HomePage homePage = new P2_1_HomePage(driver);
 
          loginPage.loginToTheSite("performance_glitch_user", "secret_sauce");
          long loginTime = System.nanoTime();
@@ -64,9 +64,9 @@ public class LoginTest extends BaseTest {
      @Test
 // There are porducts clickable
      public void Test_ErrorsUser () {
-         LoginPage loginPage = new LoginPage(driver);
-         HomePage homePage = new HomePage(driver);
-         CartPage cartPage = new CartPage(driver);
+         P1_1_LoginPage loginPage = new P1_1_LoginPage(driver);
+         P2_1_HomePage homePage = new P2_1_HomePage(driver);
+         P3_CartPage cartPage = new P3_CartPage(driver);
 
          loginPage.loginToTheSite("error_user", "secret_sauce");
          homePage.clickOneThreeProdctsFormTheHomePage();
